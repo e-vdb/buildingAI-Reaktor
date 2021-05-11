@@ -10,7 +10,7 @@ Answer of question 1 (intermediate level)
 Print all routes
 """
 
-def main():
+def answer1():
     portnames = ["PAN", "AMS", "CAS", "NYC", "HEL"]
     nb=0
     port1 = 0
@@ -24,5 +24,5 @@ def main():
                         print(' '.join([portnames[i] for i in route]))
                        
 
-main()
+answer1()
 
