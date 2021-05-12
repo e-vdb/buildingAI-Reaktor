@@ -1,4 +1,4 @@
-# buildingIA-Reaktor
+# buildingAI-Reaktor
 
 Solutions of exercices from Building AI course
 
