@@ -5,12 +5,20 @@ Created on Mon May 10 14:07:55 2021
 
 @author: Emeline
 
-Answer of question 1 (intermediate level)
-
-Print all routes
+Exercice 1 : Listing pineapple routes
 """
+# beginner level exercise
 
-def answer1():
+def factorial(n):
+    while n>1:
+        return n*(factorielle(n-1))
+    if n==1:
+        return n
+
+print(factorial(3))
+
+#  intermediate level exercise
+def main():
     portnames = ["PAN", "AMS", "CAS", "NYC", "HEL"]
     nb=0
     port1 = 0
@@ -23,6 +31,15 @@ def answer1():
                     # do not modify the print statement
                         print(' '.join([portnames[i] for i in route]))
                        
+main()
 
-answer1()
+# advance level exercise
+def permutations(route, ports):
+    if len(ports)==0:
+        print(' '.join([portnames[i] for i in route]))
+    else:
+        for i in range(len(ports)):
+            permutations(route+[ports[i]],ports[:i]+ports[i+1:])
+            
+permutations([0], list(range(1, len(portnames))))
 
