@@ -1,6 +1,6 @@
 # Exercise 10: Naive Bayes classifier
 
-
+# advance level
 import numpy as np
 
 p1 = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]   # normal
@@ -37,3 +37,13 @@ if bayes(sequence):
     print("I think loaded")
 else:
     print("I think normal")
+
+# intermediate level     
+def flip(n):
+    odds = 1.0         # start with 50% chance of the magic coin, which is the same as odds = 1:1
+    for i in range(n):
+        odds*=2           
+    print(odds)
+
+n = 1
+flip(n)
