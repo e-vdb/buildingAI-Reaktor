@@ -17,8 +17,8 @@ np.set_printoptions(precision=1)
  
 def fit_model(input_file):
     data = np.genfromtxt(input_file, skip_header=1)  
-    Y=data[:,5]
-    X=data[:,0:5]
+    Y=data[:,-1]
+    X=data[:,0:-1]
     c=np.linalg.lstsq(X, Y)[0]
 
     print(c)
