@@ -21,17 +21,8 @@ def dist(a, b):
     return np.sqrt(sum)
     
 def nearest(x_train, x_test):
-    nearest = -1
-    min_distance = np.Inf
-    # add a loop here that goes through all the vectors in x_train and finds the one that
-    # is nearest to x_test. return the index (between 0, ..., len(x_train)-1) of the nearest
-    # neighbor
-    for index,x in enumerate(x_train):
-        dist_x_xtest=dist(x,x_test)
-        if dist_x_xtest<min_distance:
-            min_distance=dist_x_xtest
-            nearest=index
-    
+    distances = [dist(train_item, x_test) for train_item in x_train]
+    nearest=np.argmin(distances)
     print(nearest)
 
 nearest(x_train, x_test)
